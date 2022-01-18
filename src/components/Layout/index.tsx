@@ -2,7 +2,7 @@
 import Toolbar from "./Toolbar";
 
 // Styled
-import { StyledLayout } from "./styles";
+import { StyledLayout } from "./styled";
 
 const Layout: React.FC = ({ children }) => {
   return (

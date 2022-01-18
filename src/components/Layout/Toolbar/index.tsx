@@ -1,7 +1,15 @@
-import React from "react";
+// Components
+import LeftNav from "./LeftNav";
+
+// Styled
+import { StyledToolbar } from "./styled";
 
 const Toolbar = () => {
-  return <header>Toolbar</header>;
+  return (
+    <StyledToolbar>
+      <LeftNav />
+    </StyledToolbar>
+  );
 };
 
 export default Toolbar;
