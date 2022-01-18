@@ -11,8 +11,10 @@ import {
   Pen,
   Rectangle,
   TLetter,
+  DownAngle,
 } from "../../../icons";
 import { NavItemType } from "./NavItem";
+import Logo from "../../../../assets/images/logo.svg";
 
 const navigation: NavItemType[] = [
   {
@@ -55,6 +57,12 @@ const navigation: NavItemType[] = [
 const LeftNav = () => {
   return (
     <StyledLeftNav>
+      <button className="project-switcher">
+        <img src={Logo} />
+        <span className="drop-down-icon">
+          <DownAngle size={0.4} color="#fff" />
+        </span>
+      </button>
       {navigation.map((navItem) => {
         return <NavItem navItem={navItem} key={navItem.id} />;
       })}

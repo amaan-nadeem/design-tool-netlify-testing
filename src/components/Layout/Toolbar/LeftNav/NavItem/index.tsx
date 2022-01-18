@@ -33,7 +33,16 @@ const NavItem: React.FC<NavItemProps> = ({ navItem }) => {
   return (
     <>
       <StyledNavItem open={menuOpen}>
-        <button className="btn" onClick={() => setMenuOpen((prev) => !prev)}>
+        <button
+          className="btn"
+          onClick={(event) => {
+            if (hasChildren) {
+              setMenuOpen((prev) => !prev);
+            } else {
+              navItem.onClick && navItem.onClick(event);
+            }
+          }}
+        >
           {Icon && <Icon size={navItem.size || 0.8} color="#fff" />}
           {hasChildren && (
             <span className="drop-down-icon">

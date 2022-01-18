@@ -36,7 +36,7 @@ export const StyledNavItem = styled.div<StyledNavItemProps>`
     left: -1px;
     background-color: ${(props) => props.theme.colors.main};
     border: 1px solid ${(props) => props.theme.colors.lies};
-    padding: 12px 0px;
+    padding: 8px 0px;
     width: 180px;
     font-size: 14px;
 
@@ -46,7 +46,7 @@ export const StyledNavItem = styled.div<StyledNavItemProps>`
 
     .drop-down-item {
       cursor: pointer;
-      padding: 4px 12px;
+      padding: 8px 16px;
 
       &:hover {
         background-color: ${(props) => props.theme.colors.lies};
