@@ -9,6 +9,7 @@ export const StyledTabs = styled.ul`
   justify-content: space-between;
   padding: 0px 16px;
   border-bottom: 1px solid ${(props) => props.theme.colors.lies};
+  list-style: none;
 `;
 
 export const StyledTab = styled.li<StyledTabType>`

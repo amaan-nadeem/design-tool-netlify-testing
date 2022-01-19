@@ -1,18 +1,51 @@
 // Components
-import Tabs from "../../../components/common/Tabs";
+import Tabs, { Tab } from "../../../components/common/Tabs";
+import HierarchyList, {
+  HierarchyElement,
+} from "../../../components/widgets/HierarchyList";
 
 // Styled
 import { LeftSidebarStyled } from "./styled";
 
 //
-import { Tab } from "../../../components/common/Tabs";
 import useTabs from "../../../components/common/Tabs/useTabs";
+
+const element: HierarchyElement = {
+  title: "video",
+  type: "frame",
+  childrens: [
+    {
+      title: "first layer",
+      type: "layer",
+    },
+    {
+      title: "second layer",
+      type: "layer",
+      childrens: [
+        {
+          title: "Welcome",
+          type: "text",
+        },
+        {
+          title: "Here",
+          type: "text",
+        },
+      ],
+    },
+  ],
+};
 
 const allTabs: Tab[] = [
   {
     id: "layer",
     text: "Layer",
-    component: () => null,
+    component: () => (
+      <>
+        <HierarchyList element={element} layer={0} />
+        <HierarchyList element={element} layer={0} />
+        <HierarchyList element={element} layer={0} />
+      </>
+    ),
   },
   {
     id: "assets",
@@ -32,6 +65,7 @@ const LeftSidebar = () => {
   return (
     <LeftSidebarStyled>
       <Tabs {...tabs} />
+      <Component />
     </LeftSidebarStyled>
   );
 };

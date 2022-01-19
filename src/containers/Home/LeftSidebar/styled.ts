@@ -8,4 +8,5 @@ export const LeftSidebarStyled = styled.div`
   width: 240px;
   height: 100%;
   border-right: 1px solid ${(props) => props.theme.colors.lies};
+  color: #fff;
 `;
