@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
   font-size: ${(props) => `${props.theme.text.default.fontsize}px`};
   font-weight: 700;
   color: ${(props) => props.theme.colors.main};
+  cursor: pointer;
 `;
 
 export const StyledButtonRound = styled(StyledButton)`
