@@ -24,6 +24,7 @@ export const CompositionSelectorStyled = styled.div`
     display: flex;
     align-items: flex-end;
     font-weight: 700;
+    cursor: pointer;
 
     .text {
       margin-right: 4px;

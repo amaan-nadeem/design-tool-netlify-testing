@@ -29,28 +29,4 @@ export const StyledNavItem = styled.div<StyledNavItemProps>`
       background-color: ${(props) => props.theme.colors.active};
     }
   }
-
-  .drop-down-popover {
-    position: absolute;
-    top: 48px;
-    left: -1px;
-    background-color: ${(props) => props.theme.colors.main};
-    border: 1px solid ${(props) => props.theme.colors.lies};
-    padding: 8px 0px;
-    width: 180px;
-    font-size: 14px;
-
-    ul {
-      list-style: none;
-    }
-
-    .drop-down-item {
-      cursor: pointer;
-      padding: 8px 16px;
-
-      &:hover {
-        background-color: ${(props) => props.theme.colors.lies};
-      }
-    }
-  }
 `;

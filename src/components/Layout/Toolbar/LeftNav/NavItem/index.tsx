@@ -2,6 +2,7 @@ import { useState } from "react";
 
 // Components
 import Backdrop from "../../../../common/Backdrop";
+import Popover from "../../../../common/Popover";
 
 // Styled
 import { StyledNavItem } from "./styled";
@@ -51,15 +52,7 @@ const NavItem: React.FC<NavItemProps> = ({ navItem }) => {
           )}
         </button>
         {hasChildren && menuOpen && (
-          <div className="drop-down-popover">
-            <ul>
-              {navItem.children?.map((child) => (
-                <li className="drop-down-item" onClick={child.onClick}>
-                  {child.text}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Popover top={48} left={-1} items={navItem.children} />
         )}
       </StyledNavItem>
       {menuOpen && <Backdrop onClick={() => setMenuOpen(false)} />}
