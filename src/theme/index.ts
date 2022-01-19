@@ -5,4 +5,10 @@ export const primaryTheme = {
     inactive: "#6F8C94",
     active: "#20F384",
   },
+
+  text: {
+    default: {
+      fontsize: 12,
+    },
+  },
 };
