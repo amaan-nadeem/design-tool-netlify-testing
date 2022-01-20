@@ -10,7 +10,7 @@ import { StyledNavItem } from "./styled";
 //
 import { Icon, DownAngle } from "../../../../icons";
 import { useAppSelector } from "../../../../../utils/hooks/store";
-import { SelectableCursors } from "../../../../../store/slices/selectionSlice";
+import { SelectableCursors } from "../../../../../types/store/selection";
 
 export type NavItemType = {
   id: string;
