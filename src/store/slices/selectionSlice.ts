@@ -10,10 +10,12 @@ export type SelectableCursors =
 
 interface SelectionState {
   cursor: SelectableCursors; // this stores the current tool selected for cursor
+  layer: string | null;
 }
 
 const initialState: SelectionState = {
   cursor: "cursor",
+  layer: null,
 };
 
 const selectionSlice = createSlice({
@@ -23,8 +25,11 @@ const selectionSlice = createSlice({
     selectCursor: (state, action: PayloadAction<SelectableCursors>) => {
       state.cursor = action.payload;
     },
+    selectLayer: (state, action: PayloadAction<string | null>) => {
+      state.layer = action.payload;
+    },
   },
 });
 
-export const { selectCursor } = selectionSlice.actions;
+export const { selectCursor, selectLayer } = selectionSlice.actions;
 export default selectionSlice.reducer;

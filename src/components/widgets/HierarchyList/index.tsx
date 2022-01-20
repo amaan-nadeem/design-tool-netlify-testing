@@ -10,8 +10,11 @@ import {
 
 //
 import { NumberSymbol, DownAngle } from "../../../components/icons";
+import { useAppDispatch, useAppSelector } from "../../../utils/hooks/store";
+import { selectLayer } from "../../../store/slices/selectionSlice";
 
 export type HierarchyElement = {
+  id: string;
   title: string;
   type: "layer" | "frame" | "text";
   childrens?: HierarchyElement[];
@@ -24,14 +27,23 @@ type HierarchyListProps = {
 
 const HierarchyList: React.FC<HierarchyListProps> = ({ element, layer }) => {
   const [childsOpen, setChildsOpen] = useState(false);
+  const dispatch = useAppDispatch();
+  const { layer: selectedLayer } = useAppSelector((state) => state.selection);
 
   const hasChildrens = Boolean(
     element.childrens && element.childrens.length !== 0
   );
 
+  const selectItem: React.MouseEventHandler = () => {
+    dispatch(selectLayer(element.id));
+  };
+
   return (
     <div>
-      <HierarchyListItemStyled>
+      <HierarchyListItemStyled
+        onClick={selectItem}
+        isActive={selectedLayer === element.id}
+      >
         <HierarchyListItemIconStyled layer={layer}>
           <NumberSymbol color="#fff" size={0.6} />
         </HierarchyListItemIconStyled>

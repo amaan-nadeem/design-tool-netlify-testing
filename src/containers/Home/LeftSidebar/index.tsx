@@ -11,22 +11,27 @@ import { LeftSidebarStyled } from "./styled";
 import useTabs from "../../../components/common/Tabs/useTabs";
 
 const element: HierarchyElement = {
-  title: "video",
+  id: "root",
+  title: "root",
   type: "frame",
   childrens: [
     {
+      id: "first",
       title: "first layer",
       type: "layer",
     },
     {
+      id: "second",
       title: "second layer",
       type: "layer",
       childrens: [
         {
+          id: "welcome",
           title: "Welcome",
           type: "text",
         },
         {
+          id: "here",
           title: "Here",
           type: "text",
         },
@@ -41,8 +46,6 @@ const allTabs: Tab[] = [
     text: "Layer",
     component: () => (
       <>
-        <HierarchyList element={element} layer={0} />
-        <HierarchyList element={element} layer={0} />
         <HierarchyList element={element} layer={0} />
       </>
     ),

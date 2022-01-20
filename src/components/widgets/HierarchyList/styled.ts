@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+type HierarchyListItemStyledType = {
+  isActive: boolean;
+};
 type HierarchyListItemIconStyledType = {
   layer: number;
 };
@@ -7,7 +10,7 @@ type HierarchyListItemButtonStyledProps = {
   open: boolean;
 };
 
-export const HierarchyListItemStyled = styled.div`
+export const HierarchyListItemStyled = styled.div<HierarchyListItemStyledType>`
   display: flex;
   align-items: center;
   padding: 8px 12px;
@@ -16,6 +19,9 @@ export const HierarchyListItemStyled = styled.div`
   &:hover {
     background-color: ${(props) => props.theme.colors.lies};
   }
+
+  ${(props) =>
+    props.isActive ? `background-color: ${props.theme.colors.lies};` : ""}
 `;
 
 export const HierarchyListItemIconStyled = styled.div<HierarchyListItemIconStyledType>`
