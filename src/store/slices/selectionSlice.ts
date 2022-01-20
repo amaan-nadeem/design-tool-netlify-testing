@@ -1,6 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type SelectableCursors = "rectangle" | "text" | "pen" | "cursor";
+export type SelectableCursors =
+  | "rectangle"
+  | "text"
+  | "pen"
+  | "cursor"
+  | "link1"
+  | "link2";
+
 interface SelectionState {
   cursor: SelectableCursors; // this stores the current tool selected for cursor
 }

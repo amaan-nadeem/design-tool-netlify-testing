@@ -25,6 +25,10 @@ export const PopoverStyled = styled.div<PopoverStyledType>`
       &:hover {
         background-color: ${(props) => props.theme.colors.lies};
       }
+
+      &.active {
+        background-color: ${(props) => props.theme.colors.active};
+      }
     }
   }
 `;

@@ -37,12 +37,20 @@ const LeftNav = () => {
       onClick: () => {},
       children: [
         {
+          id: "link1",
           text: "Link 1",
-          onClick: () => {},
+          onClick: () => {
+            dispatch(selectCursor("link1"));
+          },
+          cursorValue: "link1",
         },
         {
+          id: "link2",
           text: "Link 2",
-          onClick: () => {},
+          onClick: () => {
+            dispatch(selectCursor("link2"));
+          },
+          cursorValue: "link2",
         },
       ],
     },

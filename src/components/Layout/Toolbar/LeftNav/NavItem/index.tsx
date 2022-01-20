@@ -18,8 +18,10 @@ export type NavItemType = {
   onClick?: React.MouseEventHandler;
   size?: number;
   children?: {
+    id: string;
     text: string;
     onClick: React.MouseEventHandler;
+    cursorValue?: SelectableCursors;
   }[];
   cursorValue?: SelectableCursors;
 };
@@ -58,7 +60,12 @@ const NavItem: React.FC<NavItemProps> = ({ navItem }) => {
           )}
         </button>
         {hasChildren && menuOpen && (
-          <Popover top={48} left={-1} items={navItem.children} />
+          <Popover
+            top={48}
+            left={-1}
+            items={navItem.children}
+            activeChildren={cursor}
+          />
         )}
       </StyledNavItem>
       {menuOpen && <Backdrop onClick={() => setMenuOpen(false)} />}
