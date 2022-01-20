@@ -9,6 +9,8 @@ import { StyledNavItem } from "./styled";
 
 //
 import { Icon, DownAngle } from "../../../../icons";
+import { useAppSelector } from "../../../../../utils/hooks/store";
+import { SelectableCursors } from "../../../../../store/slices/selectionSlice";
 
 export type NavItemType = {
   id: string;
@@ -19,6 +21,7 @@ export type NavItemType = {
     text: string;
     onClick: React.MouseEventHandler;
   }[];
+  cursorValue?: SelectableCursors;
 };
 
 type NavItemProps = {
@@ -27,15 +30,18 @@ type NavItemProps = {
 
 const NavItem: React.FC<NavItemProps> = ({ navItem }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const { cursor } = useAppSelector((state) => state.selection);
 
   const Icon = navItem.icon;
   const hasChildren = navItem.children && navItem.children.length !== 0;
+
+  const isActive = navItem.cursorValue === cursor;
 
   return (
     <>
       <StyledNavItem open={menuOpen}>
         <button
-          className="btn"
+          className={`btn ${isActive ? "active" : ""}`}
           onClick={(event) => {
             if (hasChildren) {
               setMenuOpen((prev) => !prev);

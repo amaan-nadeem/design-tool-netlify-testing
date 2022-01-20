@@ -7,4 +7,7 @@ export const ViewportStyled = styled.div`
   margin-right: 240px;
   margin-left: 240px;
   background-color: #0c0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

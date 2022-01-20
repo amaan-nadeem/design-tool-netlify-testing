@@ -15,46 +15,66 @@ import {
 } from "../../../icons";
 import { NavItemType } from "./NavItem";
 import Logo from "../../../../assets/images/logo.svg";
-
-const navigation: NavItemType[] = [
-  {
-    id: "location",
-    icon: Location,
-  },
-  {
-    id: "number",
-    icon: NumberSymbol,
-    size: 0.6,
-    onClick: () => {},
-    children: [
-      {
-        text: "Link 1",
-        onClick: () => {},
-      },
-      {
-        text: "Link 2",
-        onClick: () => {},
-      },
-    ],
-  },
-  {
-    id: "rectangle",
-    icon: Rectangle,
-    size: 0.6,
-  },
-  {
-    id: "t",
-    icon: TLetter,
-    size: 0.6,
-  },
-  {
-    id: "pen",
-    icon: Pen,
-    size: 1.2,
-  },
-];
+import { useAppDispatch } from "../../../../utils/hooks/store";
+import { selectCursor } from "../../../../store/slices/selectionSlice";
 
 const LeftNav = () => {
+  const dispatch = useAppDispatch();
+
+  const navigation: NavItemType[] = [
+    {
+      id: "location",
+      icon: Location,
+      onClick: () => {
+        dispatch(selectCursor("cursor"));
+      },
+      cursorValue: "cursor",
+    },
+    {
+      id: "number",
+      icon: NumberSymbol,
+      size: 0.6,
+      onClick: () => {},
+      children: [
+        {
+          text: "Link 1",
+          onClick: () => {},
+        },
+        {
+          text: "Link 2",
+          onClick: () => {},
+        },
+      ],
+    },
+    {
+      id: "rectangle",
+      icon: Rectangle,
+      size: 0.6,
+      onClick: () => {
+        dispatch(selectCursor("rectangle"));
+      },
+      cursorValue: "rectangle",
+    },
+    {
+      id: "t",
+      icon: TLetter,
+      size: 0.6,
+      onClick: () => {
+        dispatch(selectCursor("text"));
+      },
+      cursorValue: "text",
+    },
+    {
+      id: "pen",
+      icon: Pen,
+      size: 1.2,
+      onClick: () => {
+        dispatch(selectCursor("pen"));
+      },
+      cursorValue: "pen",
+    },
+  ];
+
   return (
     <StyledLeftNav>
       <button className="project-switcher">

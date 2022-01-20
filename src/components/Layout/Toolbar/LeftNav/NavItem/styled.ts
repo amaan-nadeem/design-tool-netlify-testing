@@ -25,6 +25,7 @@ export const StyledNavItem = styled.div<StyledNavItemProps>`
       margin-left: 4px;
     }
 
+    &.active,
     &:hover {
       background-color: ${(props) => props.theme.colors.active};
     }
