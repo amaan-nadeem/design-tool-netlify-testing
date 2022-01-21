@@ -6,6 +6,7 @@ import useTabs from "../../../components/common/Tabs/useTabs";
 import FrameName from "../../../components/widgets/FrameName";
 import Layer from "../../../components/widgets/Layer";
 import Fill from "../../../components/widgets/Fill";
+import Effects from "../../../components/widgets/Effects";
 
 // Styled
 import { RightSidebarStyled } from "./styled";
@@ -19,6 +20,7 @@ const allTabs: Tab[] = [
         <FrameName />
         <Layer />
         <Fill />
+        <Effects />
       </>
     ),
   },
