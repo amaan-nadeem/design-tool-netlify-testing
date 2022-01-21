@@ -224,3 +224,49 @@ export const Search: React.FC<Icon> = ({ size = 1, color }) => {
     </svg>
   );
 };
+
+export const Drop: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 14 16"
+    >
+      <path
+        fill={color}
+        d="M12.727 9.073h.8-.8zm-11.454 0h-.8.8zM7 14.8V14v.8zM5.937 1.601l-.505-.62.505.62zm5.99 7.472c0-1.37-.643-2.734-1.554-3.965-.904-1.221-2.015-2.234-2.815-2.886l1.01-1.24c.855.696 2.077 1.804 3.091 3.174 1.007 1.36 1.868 3.059 1.868 4.917h-1.6zM6.442 2.222c-.8.652-1.91 1.665-2.815 2.886-.911 1.23-1.554 2.594-1.554 3.965h-1.6c0-1.858.86-3.556 1.868-4.917C3.355 2.786 4.577 1.678 5.432.981l1.01 1.24zm-4.37 6.85c0 1.308.52 2.56 1.444 3.485l-1.131 1.131A6.527 6.527 0 01.473 9.073h1.6zm1.444 3.485A4.927 4.927 0 007 14v1.6a6.527 6.527 0 01-4.615-1.912l1.13-1.131zM7 14c1.307 0 2.56-.52 3.484-1.443l1.132 1.131A6.527 6.527 0 017 15.6V14zm3.484-1.443a4.927 4.927 0 001.443-3.484h1.6a6.527 6.527 0 01-1.911 4.615l-1.132-1.131zM7.558 2.222a.869.869 0 00-1.116 0L5.432.982c.92-.75 2.216-.75 3.136 0l-1.01 1.24z"
+      ></path>
+    </svg>
+  );
+};
+
+export const Eye: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 14 12"
+    >
+      <path
+        fillRule="evenodd"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9.108 6.035a2.108 2.108 0 11-4.216 0 2.108 2.108 0 014.216 0z"
+        clipRule="evenodd"
+      ></path>
+      <path
+        fillRule="evenodd"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6.999 10.903c2.538 0 4.86-1.825 6.168-4.868-1.308-3.042-3.63-4.868-6.168-4.868H7c-2.538 0-4.86 1.826-6.168 4.868 1.308 3.043 3.63 4.868 6.168 4.868H7z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};

@@ -2,6 +2,10 @@
 import Tabs, { Tab } from "../../../components/common/Tabs";
 import useTabs from "../../../components/common/Tabs/useTabs";
 
+// Widgets
+import FrameName from "../../../components/widgets/FrameName";
+import Layer from "../../../components/widgets/Layer";
+
 // Styled
 import { RightSidebarStyled } from "./styled";
 
@@ -9,7 +13,12 @@ const allTabs: Tab[] = [
   {
     id: "design",
     text: "Design",
-    component: () => null,
+    component: () => (
+      <>
+        <FrameName />
+        <Layer />
+      </>
+    ),
   },
   {
     id: "animation",
