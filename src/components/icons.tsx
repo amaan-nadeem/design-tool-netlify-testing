@@ -270,3 +270,55 @@ export const Eye: React.FC<Icon> = ({ size = 1, color }) => {
     </svg>
   );
 };
+
+export const Add: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 11 11"
+    >
+      <path
+        fill={color}
+        fillRule="evenodd"
+        d="M5 6v5h1V6h5V5H6V0H5v5H0v1h5z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
+
+export const Dots: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 11 11"
+    >
+      <path
+        fill={color}
+        fillRule="evenodd"
+        d="M2 0H0v2h2V0zm0 9H0v2h2V9zm7-9h2v2H9V0zm2 9H9v2h2V9z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
+
+export const Subtract: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 11 1"
+    >
+      <path fill={color} d="M0 0H11V1H0z"></path>
+    </svg>
+  );
+};
