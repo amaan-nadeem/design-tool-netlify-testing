@@ -341,3 +341,38 @@ export const Aim: React.FC<Icon> = ({ size = 1, color }) => {
     </svg>
   );
 };
+
+export const More: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 12 2"
+    >
+      <path
+        fill={color}
+        fillRule="evenodd"
+        d="M0 0h2v2H0V0zm10 0h2v2h-2V0zM7 0H5v2h2V0z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
+
+export const Layers: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 16 16"
+    >
+      <path fill={color} d="M0 0H16V1H0z"></path>
+      <path fill={color} d="M0 6H16V8H0z"></path>
+      <path fill={color} d="M0 13H16V16H0z"></path>
+    </svg>
+  );
+};
