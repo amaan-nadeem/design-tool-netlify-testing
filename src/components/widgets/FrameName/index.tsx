@@ -2,7 +2,8 @@
 import { FrameRow, FrameRowItem, FrameRowDetail, FrameRowIcon } from "./styled";
 
 // Components
-import Widget from "..";
+import Widget from "../";
+import Checkbox from "../../formElements/Checkbox";
 
 //
 import { RightAngle, Curve, Link, Box } from "../../icons";
@@ -66,6 +67,7 @@ const FrameName = () => {
           </FrameRowIcon>
         </FrameRowItem>
       </FrameRow>
+      <Checkbox text="Clip content" id="clip-content" />
     </Widget>
   );
 };

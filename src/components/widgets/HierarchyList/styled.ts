@@ -6,7 +6,7 @@ type HierarchyListItemStyledType = {
 type HierarchyListItemIconStyledType = {
   layer: number;
 };
-type HierarchyListItemButtonStyledProps = {
+type HierarchyListItemButtonStyledType = {
   open: boolean;
 };
 
@@ -35,7 +35,7 @@ export const HierarchyListItemTextStyled = styled.span`
   font-size: ${(props) => `${props.theme.text.default.fontsize}px`};
 `;
 
-export const HierarchyListItemButtonStyled = styled.button<HierarchyListItemButtonStyledProps>`
+export const HierarchyListItemButtonStyled = styled.button<HierarchyListItemButtonStyledType>`
   padding: 4px;
   border-radius: 4px;
   background-color: transparent;
