@@ -322,3 +322,22 @@ export const Subtract: React.FC<Icon> = ({ size = 1, color }) => {
     </svg>
   );
 };
+
+export const Aim: React.FC<Icon> = ({ size = 1, color }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={sizeFactor * size}
+      height={sizeFactor * size}
+      fill="none"
+      viewBox="0 0 19 19"
+    >
+      <path
+        fill={color}
+        fillRule="evenodd"
+        d="M9 0h1v2.016A7.501 7.501 0 0116.984 9H19v1h-2.016A7.501 7.501 0 0110 16.984V19H9v-2.016A7.501 7.501 0 012.016 10H0V9h2.016A7.501 7.501 0 019 2.016V0zm6.981 9H14v1h1.981A6.501 6.501 0 0110 15.981V14H9v1.981A6.501 6.501 0 013.019 10H5V9H3.019A6.501 6.501 0 019 3.019V5h1V3.019A6.501 6.501 0 0115.981 9z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
