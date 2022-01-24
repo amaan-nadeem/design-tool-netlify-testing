@@ -9,6 +9,7 @@ import Fill from "../../../components/widgets/Fill";
 import Effects from "../../../components/widgets/Effects";
 import SelectionColors from "../../../components/widgets/SelectionColors";
 import Stroke from "../../../components/widgets/Stroke";
+import Constraints from "../../../components/widgets/Constraints";
 
 // Styled
 import { RightSidebarStyled } from "./styled";
@@ -25,6 +26,7 @@ const allTabs: Tab[] = [
         <Effects />
         <SelectionColors />
         <Stroke />
+        <Constraints />
       </>
     ),
   },
