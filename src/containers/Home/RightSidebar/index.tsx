@@ -10,6 +10,7 @@ import Effects from "../../../components/widgets/Effects";
 import SelectionColors from "../../../components/widgets/SelectionColors";
 import Stroke from "../../../components/widgets/Stroke";
 import Constraints from "../../../components/widgets/Constraints";
+import AnimationEffects from "../../../components/widgets/AnimationEffects";
 
 // Styled
 import { RightSidebarStyled } from "./styled";
@@ -33,7 +34,11 @@ const allTabs: Tab[] = [
   {
     id: "animation",
     text: "Animation",
-    component: () => null,
+    component: () => (
+      <>
+        <AnimationEffects />
+      </>
+    ),
   },
   {
     id: "inspect",
