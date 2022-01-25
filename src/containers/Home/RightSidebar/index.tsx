@@ -11,6 +11,7 @@ import SelectionColors from "../../../components/widgets/SelectionColors";
 import Stroke from "../../../components/widgets/Stroke";
 import Constraints from "../../../components/widgets/Constraints";
 import AnimationEffects from "../../../components/widgets/AnimationEffects";
+import BorisFxMocha from "../../../components/widgets/BorisFxMocha";
 
 // Styled
 import { RightSidebarStyled } from "./styled";
@@ -37,6 +38,7 @@ const allTabs: Tab[] = [
     component: () => (
       <>
         <AnimationEffects />
+        <BorisFxMocha />
       </>
     ),
   },
