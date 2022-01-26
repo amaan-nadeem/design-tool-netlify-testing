@@ -5,10 +5,11 @@ import HierarchyList, {
 } from "../../../components/widgets/HierarchyList";
 
 // Styled
-import { LeftSidebarStyled } from "./styled";
+import { LeftSidebarStyled, Page1Button } from "./styled";
 
 //
 import useTabs from "../../../components/common/Tabs/useTabs";
+import { DownAngle } from "../../../components/icons";
 
 const element: HierarchyElement = {
   id: "root",
@@ -55,11 +56,6 @@ const allTabs: Tab[] = [
     text: "Assets",
     component: () => null,
   },
-  {
-    id: "page1",
-    text: "Page 1",
-    component: () => null,
-  },
 ];
 
 const LeftSidebar = () => {
@@ -67,7 +63,15 @@ const LeftSidebar = () => {
 
   return (
     <LeftSidebarStyled>
-      <Tabs {...tabs} />
+      <Tabs
+        {...tabs}
+        endContent={
+          <Page1Button>
+            <div className="text">Page 1</div>
+            <DownAngle color="#fff" size={0.46} />
+          </Page1Button>
+        }
+      />
       <Component />
     </LeftSidebarStyled>
   );
