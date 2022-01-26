@@ -10,4 +10,11 @@ export const ViewportStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  #extended-widget-placeholder {
+    position: absolute;
+    top: 43px;
+    right: 31px;
+  }
 `;
