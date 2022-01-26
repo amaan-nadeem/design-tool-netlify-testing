@@ -7,6 +7,7 @@ import { FrameRow, FrameRowItem, FrameRowDetail, FrameRowIcon } from "./styled";
 import Widget from "../";
 import ExtendedWidget from "../../common/ExtendedWidget";
 import Checkbox from "../../formElements/Checkbox";
+import MotionTools from "../../extendedWidgets/MotionTools";
 
 //
 import { RightAngle, Curve, Link, Box } from "../../icons";
@@ -83,7 +84,7 @@ const FrameName = () => {
       </Widget>
       {extendedOpen && (
         <ExtendedWidget title="motion tools v.2.0" width={240}>
-          dummy extended widget
+          <MotionTools />
         </ExtendedWidget>
       )}
     </>

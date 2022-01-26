@@ -7,7 +7,7 @@ type ExtendedWidgetStyledType = {
 export const ExtendedWidgetStyled = styled.div<ExtendedWidgetStyledType>`
   padding: 16px;
   border: 1px solid ${(props) => props.theme.colors.lies};
-  background-color: 1px solid ${(props) => props.theme.colors.main};
+  background-color: ${(props) => props.theme.colors.main};
   color: #fff;
   width: ${(props) => props.width}px;
   min-width: fit-content;
