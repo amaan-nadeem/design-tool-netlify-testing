@@ -6,7 +6,7 @@ export const StyledLeftNav = styled.nav`
 
   .project-switcher {
     height: 48px;
-    width: 100px;
+    width: 98px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +15,13 @@ export const StyledLeftNav = styled.nav`
     border-bottom: none;
     cursor: pointer;
 
+    img {
+      height: 30px;
+      width: 40.5px;
+    }
+
     .drop-down-icon {
-      margin-left: 4px;
+      margin-left: 7px;
     }
   }
 `;

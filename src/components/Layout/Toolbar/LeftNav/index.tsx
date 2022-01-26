@@ -88,7 +88,7 @@ const LeftNav = () => {
       <button className="project-switcher">
         <img src={Logo} />
         <span className="drop-down-icon">
-          <DownAngle size={0.4} color="#fff" />
+          <DownAngle size={0.46} color="#fff" />
         </span>
       </button>
       {navigation.map((navItem) => {

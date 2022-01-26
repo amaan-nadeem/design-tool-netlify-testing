@@ -30,7 +30,7 @@ const RightNav = () => {
       <RightNavUnitStyled>
         <SizeChanger>
           <SizeChangerText>162%</SizeChangerText>
-          <DownAngle size={0.4} color="#fff" />
+          <DownAngle size={0.46} color="#fff" />
         </SizeChanger>
       </RightNavUnitStyled>
     </RightNavStyled>
