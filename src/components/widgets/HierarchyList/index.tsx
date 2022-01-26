@@ -9,14 +9,14 @@ import {
 } from "./styled";
 
 //
-import { NumberSymbol, DownAngle } from "../../../components/icons";
+import { NumberSymbol, Frame, DownAngle } from "../../../components/icons";
 import { useAppDispatch, useAppSelector } from "../../../utils/hooks/store";
 import { selectLayer } from "../../../store/slices/selectionSlice";
 
 export type HierarchyElement = {
   id: string;
   title: string;
-  type: "layer" | "frame" | "text";
+  type: "layer" | "frame" | "text" | "dropdown";
   childrens?: HierarchyElement[];
 };
 
@@ -38,6 +38,15 @@ const HierarchyList: React.FC<HierarchyListProps> = ({ element, layer }) => {
     dispatch(selectLayer(element.id));
   };
 
+  const renderIcon = () => {
+    switch (element.type) {
+      case "frame":
+        return <Frame />;
+      default:
+        return <NumberSymbol color="#fff" size={0.6} />;
+    }
+  };
+
   return (
     <div>
       <HierarchyListItemStyled
@@ -45,7 +54,7 @@ const HierarchyList: React.FC<HierarchyListProps> = ({ element, layer }) => {
         isActive={selectedLayer === element.id}
       >
         <HierarchyListItemIconStyled layer={layer}>
-          <NumberSymbol color="#fff" size={0.6} />
+          {renderIcon()}
         </HierarchyListItemIconStyled>
         <HierarchyListItemTextStyled>
           {element.title}
@@ -64,7 +73,7 @@ const HierarchyList: React.FC<HierarchyListProps> = ({ element, layer }) => {
       {hasChildrens && childsOpen && (
         <ul>
           {element.childrens?.map((child) => (
-            <HierarchyList element={child} layer={layer + 1} />
+            <HierarchyList element={child} layer={1} />
           ))}
         </ul>
       )}

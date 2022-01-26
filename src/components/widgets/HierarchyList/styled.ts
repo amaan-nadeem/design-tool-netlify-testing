@@ -13,7 +13,8 @@ type HierarchyListItemButtonStyledType = {
 export const HierarchyListItemStyled = styled.div<HierarchyListItemStyledType>`
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 0px 16px;
+  height: 34px;
   cursor: pointer;
 
   &:hover {
@@ -27,7 +28,7 @@ export const HierarchyListItemStyled = styled.div<HierarchyListItemStyledType>`
 export const HierarchyListItemIconStyled = styled.div<HierarchyListItemIconStyledType>`
   margin-right: 8px;
   margin-top: 4px;
-  margin-left: ${(props) => `${props.layer * 20}px`};
+  margin-left: ${(props) => `${props.layer * 22}px`};
 `;
 
 export const HierarchyListItemTextStyled = styled.span`

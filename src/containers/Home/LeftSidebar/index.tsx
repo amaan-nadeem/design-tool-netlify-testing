@@ -14,12 +14,12 @@ import { DownAngle } from "../../../components/icons";
 const element: HierarchyElement = {
   id: "root",
   title: "root",
-  type: "frame",
+  type: "layer",
   childrens: [
     {
       id: "first",
       title: "first layer",
-      type: "layer",
+      type: "frame",
     },
     {
       id: "second",

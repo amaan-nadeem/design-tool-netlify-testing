@@ -435,3 +435,22 @@ export const Checkmark: React.FC<Icon> = ({ size = 1, color }) => {
     </svg>
   );
 };
+
+export const Frame: React.FC<Icon> = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="10"
+      height="12"
+      fill="none"
+      viewBox="0 0 10 12"
+    >
+      <path
+        fill="#fff"
+        fillRule="evenodd"
+        d="M1 1h2v10H1V1zM0 0h4v12H0V0zm9 1H7v10h2V1zm1-1H6v12h4V0z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
